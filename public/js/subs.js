@@ -50,11 +50,11 @@ $(function() {
         var isCvvValid = $.payform.validateCardCVC(CVV.val());
 
         if(owner.val().length < 5){
-            showAlert("Incorrect Name");
+            alert("Incorrect Name");
         } else if (!isCardValid) {
-            showAlert("Invalid card number");
+            alert("Invalid card number");
         } else if (!isCvvValid) {
-            showAlert("Incorrect CVV");
+            alert("Incorrect CVV");
         } else {
             // Everything is correct. Add your form submission code here.
             fetch('/profile',{
@@ -63,7 +63,7 @@ $(function() {
         body: JSON.stringify({email :user.email,edit:true,isSubscribe:true})
     }).then(res=>res.json()).then(response=>{
         if(response.alert){
-                showAlert(response.alert);}
+                alert(response.alert);}
                 else if(response.isSubscribe){
                 // user.isSeller=true;
                 sessionUser.isSubscribe=response.isSubscribe;

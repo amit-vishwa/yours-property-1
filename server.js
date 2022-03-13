@@ -2,8 +2,6 @@
 const express = require("express");
 const fire=require("./firebaseAws");
 const signupLogin=require("./back-end/login_register") 
-const admin = require("firebase-admin");
-const bcrypt = require("bcrypt");
 const path = require("path");
 const sellHelp=require('./back-end/sell');
 const { getProperty, contactedproperties } = require("./back-end/buy");
@@ -60,10 +58,7 @@ app.get("/signup", (req, res) => {
 });
 app.post("/signup",signupLogin.signup);
 
-// adminlogin route
-app.get("/adminlogin", (req, res) => {
-    res.sendFile(path.join(staticPath, "adminlogin.html"));
-});
+
 
 // profile route
 app.get("/profile", (req, res) => {
@@ -71,10 +66,7 @@ app.get("/profile", (req, res) => {
 });
 app.post("/profile", profile);
 app.post("/contactedprofile",contactedproperties);
-// adminlogin route
-app.get("/adminprofile", (req, res) => {
-    res.sendFile(path.join(staticPath, "adminprofile.html"));
-});
+
 // get property data
 app.post('/get-property',getProperty);
 //logout

@@ -1,8 +1,8 @@
 const createTnCAlert = () => {
-    let loginmodal = document.querySelector(".modal");
+    let loginmodal = document.querySelector("#tncModalId");
   
     loginmodal.innerHTML=`
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document" id="myTNCModalAlert">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Terms and Conditions </h5>
