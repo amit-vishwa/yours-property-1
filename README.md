@@ -4,10 +4,11 @@ This is a mock project
 ### Step 1 :
 Download and extract zip file
 ### Step 2 :
-run below command
-npm i 
+run command -> npm i 
 ### step 3 :
-now run project on localhost -> npm start
+now do the mentioned things from below Note section.
+### step 4 :
+now run the project on localhost -> npm start
 
 https://yoursproperty.herokuapp.com/
 
